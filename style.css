@@ -54,12 +54,14 @@
 }
 
 #adder {
+    color: white;
     transition: 0.5s linear;
     border: none;
     border-radius: 5px;
     background-color: transparent;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: bolder;
+    -webkit-text-stroke: 1px black;
 }
 
 #adder:hover {
