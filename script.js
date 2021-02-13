@@ -39,8 +39,8 @@ adderButton.onclick = function addItemCell() {
     newItem.appendChild(newName)
     newItem.appendChild(newVal);
     newItem.appendChild(newHover);
-    newItem.style.opacity = 1;
-    setTimeout(function() {adderList.insertBefore(newItem, inputName);}, 1000);
+    adderList.insertBefore(newItem, inputName);
+    setTimeout(function() {newItem.style.opacity = 1;}, 500);
     
     clearValues([inputName, inputVal]);
 } 

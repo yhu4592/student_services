@@ -39,7 +39,7 @@
 .deleter {
     display: inline-block;
     opacity: 0; 
-    transition: opacity 0.5s; 
+    transition: opacity 0.5s ease-out; 
     height: 30px;
     width: 30px;
     background: url("deleteBlack.png");
@@ -55,7 +55,7 @@
 .adderHost {
     opacity: 0;
     width: 675px;
-    transition: all 0.5s linear;
+    transition: opacity 0.5s linear;
 }
 
 .adderHost:hover .deleter {
@@ -71,3 +71,4 @@
     display: inline-block;
     height: 30px;
     width: 505px;
+}
