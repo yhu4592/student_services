@@ -7,7 +7,6 @@
   <link rel = "stylesheet" href = "style.css"> 
 </head>
 <body>
-  <button class="adder">+</button>
   <div id="calculator">
     <div id="screen"></div>
     <div id="buttonBody">
@@ -27,13 +26,16 @@
       <div id="decimal" class="button">.</div>
       <div id="equals"class="button">=</div>
       <div id="add" class="button">+</div>
+      <div id="calc_clear" class="button">C</div>
     </div>
   </div>
+  <hr>
   <div id="linkList">
-    <label for="newLink">My List:</label> <hr class="separator">
+    <label for="newLink" id="listTitle">My List:</label> <hr class="separator">
     <input type="text" id="newName" maxlength="64" placeholder="Item name...">
     <input type="text" id="newVal" maxlength="256" placeholder="Item description...">
     <button id="adder">+</button>
+  </div>
 </body>
 <script type="text/javascript" src="script.js"></script>
 </html>
