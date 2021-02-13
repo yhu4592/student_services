@@ -69,5 +69,6 @@
 }
 .adderVal {
     display: inline-block;
+    width: 505px;
     height: 30px;
 }
