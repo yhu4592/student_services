@@ -3,17 +3,15 @@
 let adderList = document.getElementById("linkList");
 let adderButton = document.getElementById("adder");
 
-/* 
-    Click on the '+' button on the bottom right to insert a task cell
-    The cell's text will be received as input 
-*/
-adderButton.onclick = function addItemCell() {
+let inputName = document.getElementById("newName");
+let inputVal = document.getElementById("newVal");
+
+// Inserts an item cell to the My List section
+function addItemCell() {
     // Obtain the text typed in the left box
-    let inputName = document.getElementById("newName");
     let attempedName = inputName.value;
 
     // Obtain the text typed in the right box
-    let inputVal = document.getElementById("newVal");
     let attempedVal = inputVal.value;
 
     // Create the div container of all elements to be pushed (text in left box, text in right box, etc.)
@@ -45,6 +43,18 @@ adderButton.onclick = function addItemCell() {
     clearValues([inputName, inputVal]);
 } 
 
+/* If user clicks the '+' button, an item is added */
+adderButton.onclick = addItemCell;
+
+/* If user presses "Enter" key while focus is on inputName or inputVal, an item is added */
+adderList.onkeypress = function(char) {
+    let keyCode = char.code || char.key;
+    if (keyCode == 'Enter') {
+        addItemCell();
+    }
+}
+
+/* Sets the newItem opacity to 0 and removes it after transition */
 function deleteItem() {
     let target = this;
     target.parentNode.style.opacity = 0;
