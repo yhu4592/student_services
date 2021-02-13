@@ -18,11 +18,57 @@
     background-color: red;
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr:
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
+
 .button{
     display:grid;
     justify-content: center;
     align-items:center;
     border: solid 1px black;
+}
+
+#newName {
+    width: 150px;
+}
+
+#newVal {
+    width: 500px;
+}
+
+.deleter {
+    display: inline-block;
+    opacity: 0; 
+    transition: opacity 0.5s; 
+    height: 30px;
+    width: 30px;
+    background: url("deleteBlack.png");
+    position: absolute; 
+    border-radius: 5px; 
+    z-index: 0;
+}
+
+.deleter:hover {
+    background: url("deleteRed.png");
+}
+
+.adderHost {
+    opacity: 0;
+    width: 675px;
+    transition: all 0.5s linear;
+}
+
+.adderHost:hover .deleter {
+    opacity: 1;
+}
+
+.adderName {
+    display: inline-block;
+    height: 30px;
+    width: 165px;
+}
+.adderVal {
+    display: inline-block;
+    height: 30px;
+    width: 505px;
 }
