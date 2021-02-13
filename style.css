@@ -40,6 +40,7 @@
     display: inline-block;
     opacity: 0; 
     transition: opacity 0.5s ease-out; 
+    margin-top: 10px;
     height: 30px;
     width: 30px;
     background: url("deleteBlack.png");
@@ -51,6 +52,25 @@
 .deleter:hover {
     background: url("deleteRed.png");
 }
+
+#adder {
+    transition: 0.5s linear;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#adder:hover {
+    transition: 0.5s linear;
+    background-color: grey;
+}
+
+#adder:focus {
+    outline: 0;
+}
+
 
 .adderHost {
     opacity: 0;
@@ -64,11 +84,62 @@
 
 .adderName {
     display: inline-block;
-    height: 30px;
-    width: 165px;
+    height: 50px;
+    width: 145px;   /* 165px total */
+    margin: 0px 15px 0px 5px;
+    background-color: whiteSmoke;
+    border: solid;
+    border-width: 1px;
+    border-color:black;
+    border-radius: 7px;
+    overflow: auto;
+    scrollbar-width: none;
 }
+
 .adderVal {
     display: inline-block;
-    width: 505px;
-    height: 30px;
+    height: 50px;
+    width: 485px;   /* 505px total */
+    margin: 0px 15px 0px 5px;
+    background-color: whiteSmoke;
+    border: solid;
+    border-width: 1px;
+    border-color:black;
+    border-radius: 7px;
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.adderName::-webkit-scrollbar {
+    width: 12px;
+}
+
+.adderVal::-webkit-scrollbar {
+    width: 12px;
+}
+
+#linkList {
+    background-color: lightgrey;
+    border: solid;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 7px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 700px;
+    padding: 20px;
+}
+
+.separator {
+    height: 1px;
+    border-width: 0px;
+    width: 95%;
+    color: black;
+    background-color: black;
+}
+
+#listTitle {
+    display: block;
+    font-size: 34px;
+    text-align: center;
+    font-family: Verdana, sans-serif;
 }

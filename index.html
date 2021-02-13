@@ -7,7 +7,6 @@
   <link rel = "stylesheet" href = "style.css"> 
 </head>
 <body>
-  <button class="adder">+</button>
   <div id="calculator">
     <div id="screen"></div>
     <div id="buttonBody">
@@ -32,9 +31,9 @@
   </div>
   <hr>
   <div id="linkList">
-    <label for="newLink">My List:</label> <br/>
-    <input type="text" id="newName" maxlength="24" placeholder="Item name...">
-    <input type="text" id="newVal" maxlength="80" placeholder="Item description...">
+    <label for="newLink" id="listTitle">My List:</label> <hr class="separator">
+    <input type="text" id="newName" maxlength="64" placeholder="Item name...">
+    <input type="text" id="newVal" maxlength="256" placeholder="Item description...">
     <button id="adder">+</button>
   </div>
 </body>
