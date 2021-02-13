@@ -1,0 +1,28 @@
+#calculator{
+    border: solid 1px black;
+    height: 301px;
+    width: 300px;
+}
+
+#screen{
+    display:grid;
+    justify-content: center;
+    align-items:center;
+    border: solid 1px black;
+    height: 10%;
+    padding: 1fr 1fr 1fr 1fr;
+}
+
+#buttonBody{
+    height: 89%;
+    background-color: red;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr:
+}
+.button{
+    display:grid;
+    justify-content: center;
+    align-items:center;
+    border: solid 1px black;
+}
