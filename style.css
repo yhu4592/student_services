@@ -109,7 +109,7 @@ iframe {
 
 #adder:hover {
     transition: 0.3s linear;
-    background-color:  rgb(45, 64, 70);
+    background-color:  rgb(59, 83, 90);
 }
 
 #adder:focus {
@@ -133,7 +133,7 @@ iframe {
     height: 50px;
     width: 110px;   /* 165px total */
     margin: 0px 15px 0px 5px;
-    background-color: rgb(45, 64, 70);
+    background-color: rgb(59, 83, 90);
     color: white;
     border: none;
     border-radius: 7px;
@@ -146,7 +146,7 @@ iframe {
     height: 50px;
     width: 330px;   /* 505px total */
     margin: 0px 5px 0px 0px;
-    background-color: rgb(45, 64, 70);
+    background-color:rgb(59, 83, 90);
     color: white;
     border: none;
     border-radius: 7px;
@@ -190,7 +190,7 @@ form input, form button{
     padding: 0.5rem;
     font-size: 2rem;
     border: none;
-    background:rgb(45, 64, 70);
+    background:rgb(59, 83, 90);
     border-radius: 10px;
 }
 
