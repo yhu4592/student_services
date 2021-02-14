@@ -1,5 +1,16 @@
 "use strict";
 
+/*
+ *
+ *
+ * 
+ * 
+ * LIST
+ * 
+ * 
+ * 
+ * 
+ */
 let adderList = document.getElementById("linkList");
 let adderButton = document.getElementById("adder");
 
@@ -26,7 +37,11 @@ function addItemCell() {
     // Let this span contain the text typed in the right box
     let newVal = document.createElement("span");
     newVal.className = "adderVal";
-    newVal.textContent = attempedVal;
+    let newValValue = attempedVal;
+    if (newValValue.includes("http://"))
+        newVal.appendChild(formAnchor(newValValue));
+    else
+        newVal.textContent = attempedVal;
 
     // This span will be a hover image that has functionality to delete a task
     let newHover = document.createElement("span");
@@ -61,14 +76,49 @@ function deleteItem() {
     setTimeout(function() {target.parentNode.remove();}, 500);
 }
 
-/*
-    Set all elements' values in the array argument to an empty string
-*/
+/* Set all elements' values in the array argument to an empty string */
 function clearValues(elements) {
     for (let i = 0; i < elements.length; i++)
         elements[i].value = "";
 }
 
+/* Convert the input to text + anchors while retaining whitespace */
+function formAnchor(input) {
+    const frag = document.createDocumentFragment();
+    const lastIndex = input.length + 1;
+    var posHttp, posWSpace, textNode;
+    for (var i = 0; i != lastIndex && ((posHttp = input.slice(i, lastIndex).indexOf("http://")) != -1); ) {
+        textNode = input.slice(i, i + posHttp);
+        for (var j = 0; j < posHttp; j++) {
+            textNode += "\u00A0";
+        }
+        frag.appendChild(document.createTextNode(textNode));
+        posHttp += i;
+        posWSpace = input.slice(posHttp, lastIndex).indexOf(" ");
+        if (posWSpace == -1)
+            posWSpace = lastIndex;
+        else 
+            posWSpace += i;
+        let newAnchor = document.createElement("a");
+        newAnchor.textContent = newAnchor.href = input.slice(posHttp, posWSpace);
+        frag.appendChild(newAnchor);
+        i = posWSpace;
+    }
+    frag.appendChild(document.createTextNode(input.slice(i, i + input.length)));
+    return frag;
+}
+
+/*
+ *
+ *
+ * 
+ * 
+ * CALCULATOR
+ * 
+ * 
+ * 
+ * 
+ */
 let screen = document.getElementById("screen");
 
 function solve(){
