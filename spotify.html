@@ -1,21 +1,31 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Services</title>
+</head>
 <html>
 <body>
     
 <h1 style = "background-color:MediumSeaGreen;color:white; text-align:center" > Spotify </h1>
-<iframe id=spotifyplayer src="" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-<iframe id=s src="https://open.spotify.com/embed/playlist/062pgdPQpCgkDee1ZYRb7J" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<iframe id="spotifyplayer" src="about:blank" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<iframe id="s" src="https://open.spotify.com/embed/playlist/062pgdPQpCgkDee1ZYRb7J" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 <form>
     Enter the spotify playlist ID: 
     <input   type="text" id='userInput'>
-    <input   type="submit" value= "Go" onclick="spotifyuserid()">
-    <script> 
-    function spotifyuserid()
+    <input   type="submit" value= "Go" id="Submission">
+</form>
+<script> 
+"use strict";
+    document.getElementById("Submission").onclick = function spotifyuserid()
     {
-    var input = document.getElementById('userInput')
-    }
-    document.getElementById('spotifyplayer').src =
-              'google.com'+ spotifyuserid();
+    var input = document.getElementById('userInput');
+    let savedEmbed = document.getElementById('spotifyplayer').src = "https://open.spotify.com/embed/playlist/" + input.value;
+    localStorage.setItem("embed", savedEmbed);
+    };
+    if (!(document.getElementById('spotifyplayer').src = localStorage.getItem("embed")))
+        document.getElementById('spotifyplayer').src = "about:blank";
     </script> 
 </body>
 </html>
