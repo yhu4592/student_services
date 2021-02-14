@@ -197,3 +197,53 @@ equals.addEventListener("click", solve);
 
 let calc_clear = document.getElementById("calc_clear");
 calc_clear.addEventListener("click", clear);
+
+//selectors
+const todoInput = document.querySelector(".todo-input");
+const todoButton = document.querySelector(".todo-button");
+const todoList = document.querySelector(".todo-list");
+
+//Event Listener
+todoButton.addEventListener('click', addTodo);
+todoList.addEventListener('click', deleteCheck)
+
+//Function
+function addTodo(event){
+    event.preventDefault(); // Prevents form from submitting
+    //Create todo DIV
+    const todoDiv = document.createElement('div');
+    todoDiv.classList.add("todo");
+    //Create LI
+    const newTodo = document.createElement('li');
+    newTodo.innerText = todoInput.value; //adds whats in bar to text
+    newTodo.classList.add("todo-item"); 
+    todoDiv.appendChild(newTodo);
+    //check Mark button
+    const completedButton = document.createElement('button');
+    completedButton.innerHTML = '<i class="fas fa-check"></i>'; // adds i tag to html of button
+    completedButton.classList.add("complete-btn");
+    todoDiv.appendChild(completedButton);
+    //delete button
+    const deleteButton = document.createElement('button');
+    deleteButton.innerHTML = '<i class="fas fa-trash"> </i>'; // adds i tag to html of button
+    deleteButton.classList.add("delete-btn");
+    todoDiv.appendChild(deleteButton);
+    //We gotta append to the list
+    todoList.appendChild(todoDiv);
+    //clears text
+    todoInput.value = "";
+}
+
+function deleteCheck(event){
+    const item = event.target;
+    //delete to do
+    if (item.classList[0] === 'delete-btn') {
+        const todo = item.parentElement;
+        todo.remove();
+    }
+
+    if (item.classList[0] === "complete-btn") {
+        const todo = item.parentElement;
+        todo.classList.toggle("completed");
+    }
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel = "stylesheet" href = "style.css"> 
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -13,16 +13,20 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <iframe src="spotify.html" width="300" height="600"></iframe>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel = "stylesheet" href = "style.css">
+  <script src="jquery-3.5.1.js" async></script>
+  <title>Student Services</title>
 </head>
 <body>
+  <iframe src="spotify.html" width="300" height="600"></iframe>
   <div id="calculator">
     <div id="screen"></div>
     <div id="buttonBody">
       <div id="seven" class="button">7</div>
       <div id="eight"class="button">8</div>
       <div id="nine" class="button">9</div>
-      <div id="divide"class="button">%</div>
+      <div id="divide"class="button">/</div>
       <div id="four" class="button">4</div>
       <div id="five"class="button">5</div>
       <div id="six" class="button">6</div>
@@ -45,6 +49,19 @@
     <input type="text" id="newVal" maxlength="256" placeholder="Item description...">
     <button id="adder">+</button>
   </div>
+
+  <div id="toDoList">
+    <form>
+      <input type="text" class="todo-input">
+      <button class="todo-button" type="submit">
+        <i class="fas fa-plus-square"></i>
+      </button>
+    </form>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
+    </div>
+  </div>
+
 </body>
 <script type="text/javascript" src="script.js"></script>
 </html>
