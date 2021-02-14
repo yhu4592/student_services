@@ -5,15 +5,22 @@
 }
 
 body {
-    background-image: linear-gradient(120deg, #f6d365, #fda085);
-    font-family: "Poppins", sans-serif;
+    /*background: linear-gradient(120deg, #f6d365, #fda085);
+    background-size: 100%;*/
+    margin: 3px;
+    background-color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     display:flex;
     justify-content: space-between;
 }
 
+iframe {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 #calculator{
-    border: solid 5px black;
-    background: rgb(192, 191, 190);
+    margin: 15px 0px;
+    background: rgb(240, 240, 240);
     height: 301px;
     width: 300px;
     border-radius: 7px;
@@ -29,7 +36,7 @@ body {
     background-color: white;
     justify-content: center;
     align-items:center;
-    border: solid 1px black;
+    border: solid 1px grey;
     height: 87%;
     width: 95%;
     border-radius: 7px;
@@ -48,26 +55,32 @@ body {
 }
 
 .button{
+    font-weight: normal;
     display:grid;
     justify-content: center;
-    background-color: white;
+    background-color:  rgb(196, 191, 191);
     align-items:center;
-    border: solid 1px black;
-    border-radius: 7px;
+    border-radius: 10px;
+    transition: 0.3s linear;
+}
+
+.button:hover {
+    transition: 0.3s linear;
+    background-color:rgb(224, 219, 219);
 }
 
 #newName {
-    width: 150px;
+    width: 130px;
 }
 
 #newVal {
-    width: 500px;
+    width: 360px;
 }
 
 .deleter {
     display: inline-block;
     opacity: 0; 
-    transition: opacity 0.5s ease-out; 
+    transition: opacity 0.3s ease-out; 
     margin-top: 10px;
     height: 30px;
     width: 30px;
@@ -82,6 +95,8 @@ body {
 }
 
 #adder {
+    margin-top: 10px;
+    width: 30px;
     color: white;
     transition: 0.5s linear;
     border: none;
@@ -93,8 +108,8 @@ body {
 }
 
 #adder:hover {
-    transition: 0.5s linear;
-    background-color: grey;
+    transition: 0.3s linear;
+    background-color:  rgb(59, 83, 90);
 }
 
 #adder:focus {
@@ -103,9 +118,10 @@ body {
 
 
 .adderHost {
+    margin: 10px;
     opacity: 0;
-    width: 675px;
-    transition: opacity 0.5s linear;
+    width: 475px;
+    transition: opacity 0.3s linear;
 }
 
 .adderHost:hover .deleter {
@@ -115,12 +131,11 @@ body {
 .adderName {
     display: inline-block;
     height: 50px;
-    width: 145px;   /* 165px total */
+    width: 110px;   /* 165px total */
     margin: 0px 15px 0px 5px;
-    background-color: whiteSmoke;
-    border: solid;
-    border-width: 1px;
-    border-color:black;
+    background-color: rgb(59, 83, 90);
+    color: white;
+    border: none;
     border-radius: 7px;
     overflow: auto;
     scrollbar-width: none;
@@ -129,12 +144,11 @@ body {
 .adderVal {
     display: inline-block;
     height: 50px;
-    width: 485px;   /* 505px total */
-    margin: 0px 15px 0px 5px;
-    background-color: whiteSmoke;
-    border: solid;
-    border-width: 1px;
-    border-color:black;
+    width: 330px;   /* 505px total */
+    margin: 0px 5px 0px 0px;
+    background-color:rgb(59, 83, 90);
+    color: white;
+    border: none;
     border-radius: 7px;
     overflow: auto;
     scrollbar-width: none;
@@ -149,10 +163,9 @@ body {
 }
 
 #linkList {
-    background-color: lightgrey;
+    background-color:white;
     border: solid;
-    border-width: 3px;
-    border-color: black;
+    border: none;
     border-radius: 7px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 700px;
@@ -161,37 +174,34 @@ body {
     align-self:flex-start;
 }
 
-.separator {
-    height: 1px;
-    border-width: 0px;
-    width: 95%;
-    color: black;
-    background-color: black;
-}
-
 #listTitle {
+    background: lightblue;
+    border-radius: 13px;
+    color: white;
     display: block;
-    font-size: 34px;
+    font-weight: bold;
+    font-size: 26pt;
     text-align: center;
-    font-family: Verdana, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 form input, form button{
+    margin: 15px 0px;
     padding: 0.5rem;
     font-size: 2rem;
     border: none;
-    background: white;
-    
+    background:rgb(59, 83, 90);
+    border-radius: 10px;
 }
 
 form button{
-    color: aqua;
+    color: lightblue;
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 form button:hover{
-    background: aqua;
+    background: lightblue;
     color: white;
     
 }
@@ -213,7 +223,7 @@ form button:hover{
 
 .todo{
     margin: 0.5rem;
-    background: white;
+    background: FFFEF2;
     color: black;
     font-size: 1,5rem;
     display: flex;

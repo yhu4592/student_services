@@ -6,29 +6,18 @@
   <title>Spotify Services</title>
 </head>
 <html>
-<style> body{
-  animation: colorchange 30s infinite; 
-}
-@keyframes colorchange
-{
-  0%   {background: red;}
-  25%  {background: yellow;}
-  50%  {background: blue;}
-  75%  {background: green;}
-  100% {background: red;}
-}
-</style>
+
 <body>
     
-<h1 style = "background-color:MediumSeaGreen;color:rgb(30, 19, 190); text-align:center" > Spotify </h1>
-<iframe id="spotifyplayer" src="about:blank" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-<form>
+<h1 style = "border-radius:7px;font-size:26pt;font-family:Verdana, Geneva, Tahoma, sans-serif;background-color:MediumSeaGreen;color:white; text-align:center" > Spotify </h1>
+<iframe id="spotifyplayer" style="border-radius: 15px;" src="about:blank" width="280" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<form style="border:none;font-family: Verdana, Geneva, Tahoma, sans-serif;">
     Enter the spotify playlist ID: 
-    <input   type="text" id='userInput'>
-    <input   type="submit" value= "Go" id="Submission">
-</form>
+    <input   type="text" id='userInput' style="margin:8%;">
+    <input   type="submit" value= "Go" id="Submission" style="border:none;border-radius:5px;font-size: 17px;">
+  </form>
 <script> 
-"use strict";
+    "use strict";
     document.getElementById("Submission").onclick = function spotifyuserid()
     {
     var input = document.getElementById('userInput');

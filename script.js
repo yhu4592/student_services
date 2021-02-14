@@ -53,7 +53,7 @@ function addItemCell() {
     newItem.appendChild(newVal);
     newItem.appendChild(newHover);
     adderList.insertBefore(newItem, inputName);
-    setTimeout(function() {newItem.style.opacity = 1;}, 500);
+    setTimeout(function() {newItem.style.opacity = 1;}, 300);
     
     clearValues([inputName, inputVal]);
 } 
@@ -73,7 +73,7 @@ adderList.onkeypress = function(char) {
 function deleteItem() {
     let target = this;
     target.parentNode.style.opacity = 0;
-    setTimeout(function() {target.parentNode.remove();}, 500);
+    setTimeout(function() {target.parentNode.remove();}, 300);
 }
 
 /* Set all elements' values in the array argument to an empty string */
