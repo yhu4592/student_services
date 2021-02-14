@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="jquery-3.5.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <link rel = "stylesheet" href = "style.css">
+  <script src="jquery-3.5.1.js" async></script>
   <title>Student Services</title>
-  <link rel = "stylesheet" href = "style.css"> 
 </head>
 <body>
   <div id="calculator">
@@ -37,9 +39,19 @@
     <input type="text" id="newVal" maxlength="256" placeholder="Item description...">
     <button id="adder">+</button>
   </div>
-  <div id="toDoList">
 
+  <div id="toDoList">
+    <form>
+      <input type="text" class="todo-input">
+      <button class="todo-button" type="submit">
+        <i class="fas fa-plus-square"></i>
+      </button>
+    </form>
+    <div class="todo-container">
+      <ul class="todo-list"></ul>
+    </div>
   </div>
+
 </body>
 <script type="text/javascript" src="script.js"></script>
 </html>
